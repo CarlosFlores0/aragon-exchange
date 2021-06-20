@@ -1,6 +1,6 @@
 <template>
   <div>
-    <px-assets-table :assets="assets"/>
+    <px-assets-table :assets="assets" />
   </div>
 </template>
 
@@ -13,15 +13,14 @@ export default {
 
   components: { PxAssetsTable },
 
-  data () {
+  data() {
     return {
-      assets: []
-    }
+      assets: [],
+    };
   },
 
   created() {
-    api.getAssests()
-      .then(assets => this.assets = assets);
-  }
+    api.getAssests().then((assets) => (this.assets = assets));
+  },
 };
 </script>
